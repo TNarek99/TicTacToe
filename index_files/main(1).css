@@ -1,0 +1,54 @@
+.name{
+  
+  color: grey;
+	
+}
+
+.name:hover{
+	color: white;
+}
+
+.fixed{
+	position: fixed;
+}
+
+.sidebar-nav {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top{
+	background-color: #006699;
+	color: white;
+}
+
+.item{
+	color: #006699;
+}
+
+.item:hover{
+	color: blue;
+	background-color: grey;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding: 8px;
+	margin: 8px;
+  }
+}

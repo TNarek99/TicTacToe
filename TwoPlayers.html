@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)file:///I:/Narek/ACA/DAY5/2/index.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+  <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+	<link href="./index_files/main.css" rel="stylesheet">
+	<link href="./index_files/css" rel="stylesheet" type="text/css">
+	<link href = "main.css" rel = "stylesheet">
+
+  <style>
+
+
+  </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class = "container">
+      <br>
+      <div class = "row">
+        <div class = "col-md-12 text-center">
+          <h1 class = "text-primary">Two Players</h1>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-6 text-center">
+          <h1 class = "text-primary">P1</h1>
+          <h1 class = "text-primary" id = "point1">0</h1>
+        </div>
+        <div class = "col-md-6 text-center">
+          <h1 class = "text-primary">P2</h1>
+          <h1 class = "text-primary" id = "point2">0</h1>
+        </div>
+      </div>
+      <br>
+      <div id = "gridContainer">
+        <div class = "row rows">
+          <div class = "col-md-4 text-center">
+            <h2 class = "text-info" style = "float: left;">Player1 --- X</h2>
+          </div>
+          <div class = "col-md-6">
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r0c0">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r0c1">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r0c2">
+            </div>
+          </div>
+        </div>
+
+        <div class = "row rows">
+          <div class = "col-md-4 text-center">
+            <h2 class = "text-info" style = "float: left;">Player2 --- O</h2>
+          </div>
+          <div class = "col-md-6">
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r1c0">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r1c1">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r1c2">
+            </div>
+          </div>
+        </div>
+
+        <div class = "row rows">
+          <div class = "col-md-4"></div>
+          <div class = "col-md-6">
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r2c0">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r2c1">
+            </div>
+
+            <div class = "col-md-4 cell text-center" onclick = "move(this, 3)" id = "r2c2">
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./index_files/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./index_files/bootstrap.min.js"></script>
+  </body>
+
+
+
+
+
+</html>
