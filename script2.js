@@ -10,6 +10,7 @@ var player = 'X';
 var pointpc = 0;
 var pointplayer = 0;
 var firstPC = false;
+var start;
 
 /*if (firstPC == true){
   instantiate(3);
@@ -103,6 +104,7 @@ function movePC(size){
      var diagSecond = '';
      var cols = new Array(size);
      var rows = new Array(size);
+     start = Math.floor((Math.random() * 6) + 0);
      instantiate(size);
      for (var k = 0; k < size; k++){
        cols[k] = '';
@@ -126,7 +128,7 @@ function movePC(size){
      }
 
 
-     //console.log(rows[2]);
+
 
      for (var q = 0; q < size; q++){
        if (diagSecond.trim() == pc + pc){
@@ -240,6 +242,95 @@ function movePC(size){
        }
 
      }}}}
+     if (start == 0){
+       if (board[0][0] != pc && board[0][0] != player){
+         document.getElementById('r0c0').innerHTML = pc;
+         return;
+       }else{
+         if (board[2][0] != pc && board[2][0] != player){
+           document.getElementById('r2c0').innerHTML = pc;
+           return;
+         }else{
+           if (board[2][2] != pc && board[2][2] != player){
+             document.getElementById('r2c2').innerHTML = pc;
+             return;
+           }else{
+             if (board[0][2] != pc && board[0][2] != player){
+               document.getElementById('r0c2').innerHTML = pc;
+               return;
+             }
+           }
+         }
+       }
+     }else{
+       if (start == 1){
+         if (board[2][0] != pc && board[2][0] != player){
+           document.getElementById('r2c0').innerHTML = pc;
+           return;
+         }else{
+           if (board[2][2] != pc && board[2][2] != player){
+             document.getElementById('r2c2').innerHTML = pc;
+             return;
+           }else{
+             if (board[0][0] != pc && board[0][0] != player){
+               document.getElementById('r0c0').innerHTML = pc;
+               return;
+             }else{
+               if (board[0][2] != pc && board[0][2] != player){
+                 document.getElementById('r0c2').innerHTML = pc;
+                 return;
+               }
+             }
+           }
+         }
+       }else{
+         if (start == 2){
+           if (board[0][2] != pc && board[0][2] != player){
+             document.getElementById('r0c2').innerHTML = pc;
+             return;
+           }else{
+             if (board[2][2] != pc && board[2][2] != player){
+               document.getElementById('r2c2').innerHTML = pc;
+               return;
+             }else{
+               if (board[0][0] != pc && board[0][0] != player){
+                 document.getElementById('r0c0').innerHTML = pc;
+                 return;
+               }else{
+                 if (board[2][0] != pc && board[2][0] != player){
+                   document.getElementById('r2c0').innerHTML = pc;
+                   return;
+                 }
+               }
+             }
+           }
+         }else{
+           if (start == 3){
+             if (board[2][2] != pc && board[2][2] != player){
+               document.getElementById('r2c2').innerHTML = pc;
+               return;
+             }else{
+               if (board[0][0] != pc && board[0][0] != player){
+                 document.getElementById('r0c0').innerHTML = pc;
+                 return;
+               }else{
+                 if (board[2][0] != pc && board[2][0] != player){
+                   document.getElementById('r2c0').innerHTML = pc;
+                   return;
+                 }else{
+                   if (board[0][2] != pc && board[0][2] != player){
+                     document.getElementById('r0c2').innerHTML = pc;
+                     return;
+                   }
+                 }
+               }
+             }
+           }
+         }
+
+       }
+
+     }
      rand();
      return;
 
