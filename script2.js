@@ -37,7 +37,7 @@ function step(ele, size){
     if (check(3, player) == false){
       movePC(size);
     }
-  }
+  }///checkpoint
   var isPCWinner = check(3, pc);
   var isPlayerWinner = check(3, player);
   if (isPCWinner == true){
@@ -126,10 +126,11 @@ function movePC(size){
      }
 
 
+     //console.log(rows[2]);
 
      for (var q = 0; q < size; q++){
        if (diagSecond.trim() == pc + pc){
-         console.log('diags');
+         console.log('PcDiagSecond');
          for (var z = 0; z < size; z++){
            for (var y = 0; y < size; y++){
              if ((z + y) == (size - 1)){
@@ -145,7 +146,7 @@ function movePC(size){
        }else{
 
        if (diagFirst.trim() == pc + pc){
-         console.log('diagf');
+         console.log('PcDiagFirst');
          for (var z = 0; z < size; z++){
            for (var y = 0; y < size; y++){
              if (z == y){
@@ -160,7 +161,7 @@ function movePC(size){
        }else{
 
        if (cols[q].trim() == pc + pc){
-         console.log('cols');
+         console.log('PcCols');
          for (var z = 0; z < size; z++){
            if (board[z][q] != "X" && board[z][q] != "O"){
              l = 'r' + z + 'c' + q;
@@ -172,7 +173,7 @@ function movePC(size){
 
        if (rows[q].trim() == pc + pc){
 
-         console.log('row');
+         console.log('PcRows');
          for (var z = 0; z < size; z++){
            if (board[q][z] != "X" && board[q][z] != "O"){
              l = 'r' + q + 'c' + z;
@@ -180,10 +181,12 @@ function movePC(size){
             return;
            }
          }
-       }else{
+       }}}}}
+
+     for (var q = 0; q < size; q++){
 
        if (rows[q].trim() == player + player){
-
+         console.log('PlayerRows');
          for (var z = 0; z < size; z++){
            if (board[q][z] != "X" && board[q][z] != "O"){
              l = 'r' + q + 'c' + z;
@@ -194,7 +197,7 @@ function movePC(size){
        } else{
 
        if (cols[q].trim() == player + player){
-
+         console.log('PlayerCols');
          for (var z = 0; z < size; z++){
            if (board[z][q] != "X" && board[z][q] != "O"){
              l = 'r' + z + 'c' + q;
@@ -206,7 +209,7 @@ function movePC(size){
 
 
        if (diagFirst.trim() == player + player){
-
+         console.log('PlayerDiagFirst');
          for (var z = 0; z < size; z++){
            for (var y = 0; y < size; y++){
              if (z == y){
@@ -221,7 +224,7 @@ function movePC(size){
        }else{
 
        if (diagSecond.trim() == player + player){
-
+         console.log('PlayerDiagSecond');
          for (var z = 0; z < size; z++){
            for (var y = 0; y < size; y++){
              if ((z + y) == (size - 1)){
@@ -236,16 +239,9 @@ function movePC(size){
 
        }
 
-       else{
-          if (q == size - 1){
-            rand();
-            return;
-          }else{
-            continue;
-          }
-
-       }
-     }}}}}}}}
+     }}}}
+     rand();
+     return;
 
 }
 
