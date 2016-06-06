@@ -41,6 +41,7 @@ function move(ele, size){
       for (var n = 0; n < size; n++){
         z = 'r' + m + 'c' + n;
         document.getElementById(z).innerHTML = "";
+        document.getElementById(z).style.color = 'white';
 
       }
     }
@@ -54,6 +55,7 @@ function move(ele, size){
       for (var n = 0; n < size; n++){
         z = 'r' + m + 'c' + n;
         document.getElementById(z).innerHTML = "";
+        document.getElementById(z).style.color = 'white';
 
       }
     }
@@ -69,7 +71,7 @@ function move(ele, size){
       for (var n = 0; n < size; n++){
         z = 'r' + m + 'c' + n;
         document.getElementById(z).innerHTML = "";
-
+        document.getElementById(z).style.color = 'white';
       }
     }
     return;
@@ -83,8 +85,8 @@ function check(size, pl){
   var isWinner = false;
   var col;
   var row;
-  var diagFirst = '';
   var diagSecond = '';
+  var diagFirst = '';
   var cols = new Array(size);
   var rows = new Array(size);
   for (var i = 0; i < size; i++){
@@ -110,21 +112,35 @@ function check(size, pl){
     }
   }
 
-  
+
 
   if (diagFirst == pl + pl + pl){
     isWinner = true;
+    document.getElementById('r0c0').style.color = 'black';
+    document.getElementById('r1c1').style.color = 'black';
+    document.getElementById('r2c2').style.color = 'black';
   }else{
     if (diagSecond == pl + pl + pl){
         isWinner = true;
+        document.getElementById('r0c2').style.color = 'black';
+        document.getElementById('r1c1').style.color = 'black';
+        document.getElementById('r2c0').style.color = 'black';
     }
     else{
       for (var l = 0; l < size; l++){
         if (rows[l] == pl + pl + pl){
           isWinner = true;
+          var identifier = 'r' + l + 'c';
+          document.getElementById(identifier + '0').style.color = 'black';
+          document.getElementById(identifier + '1').style.color = 'black';
+          document.getElementById(identifier + '2').style.color = 'black';
         }else{
           if (cols[l] == pl + pl + pl){
             isWinner = true;
+            var identifier = 'c' + l;
+            document.getElementById('r' + 0 + identifier).style.color = 'black';
+            document.getElementById('r' + 1 + identifier).style.color = 'black';
+            document.getElementById('r' + 2 + identifier).style.color = 'black';
           }
         }
       }
