@@ -20,8 +20,8 @@
 }
 
 .cell:hover{
-  background-color: white;
-  color: #f05f40;
+  background-color: white !important;
+  color: #f05f40 !important;
 }
 
 .rows{
