@@ -10,6 +10,8 @@ var point1 = 0;
 var point2 = 0;
 var z;
 
+console.log('Hello there');
+
 
 function move(ele, size){
   var id = ele.id;
